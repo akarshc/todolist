@@ -35,39 +35,46 @@ header {
 	margin-top:1.5em;
 }
 
+.additem_outer {
+	display: flex;
+	align-items: center;
+}
+
 .additem {
-	padding: 12px 5px;
+	padding: 15px;
 	margin:0;
 	width: 250px;
 	outline: none;
+	border-radius: 3px;
 	border: none;
 	transition: .15s ease-in-out;
-	border-bottom: 1px solid #ddd;
+	box-shadow: 0 2px 4px #ddd;
 	margin-right:.5em;
-	font-size:18px;
-	font-weight: 700;
+	margin-left:1em;
+	font-size:20px;
 	color:#222;
 }
 
 .additem:focus {
-	border-bottom:1px solid #78f;
+	box-shadow: 0 5px 10px #ddd;
 }
 
 h5 {
 	font-size:16px;
-	color:#000;
+	color:#226;
 }
 
 button {
 	border:none;
 	cursor: pointer;
 	color:#fff;
-	padding:15px 25px;
+	padding:18px 25px;
 	font-size: 14px;
 	font-weight: 700;
 	background: #78f;
 	transition: .15s ease-in-out;
 	border-radius: 3px;
+	box-shadow: 0 3px 6px #abe;
 }
 
 button:hover {
@@ -166,7 +173,7 @@ button:focus {
 
 /* On mouse-over, add a grey background color */
 .list li:hover input ~ .checkmark {
-  background-color: #78f;
+  background-color: #aab;
 }
 
 /* When the checkbox is checked, add a blue background */

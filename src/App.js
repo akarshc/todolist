@@ -116,6 +116,7 @@ editItem = (e) => {
 
         <div>
         <h5>Todo</h5>
+        <div className="additem_outer">
         <input
         className="additem"
         type="text"
@@ -126,6 +127,7 @@ editItem = (e) => {
         onChange= {(event)=>{ this.setState({todo : event.target.value }) } } placeholder="What next?" /> 
 
         <button onClick={this.addItem}>Add</button>
+        </div>
         <ul className="list">
           {this.state.list.length !== 0
             ? this.state.list.map((item) => (
