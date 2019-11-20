@@ -1,0 +1,202 @@
+
+@keyframes fadeIn{0%{opacity: 0;}100%{opacity: 1;}}
+
+body {
+  margin: 0;
+  padding:0 2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:20px;
+  font-family: lato;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+header {
+	background: #226;
+}
+
+.logo {
+	font-weight: 700;
+	font-size:20px;
+	color:#fff;
+}
+
+.date {
+	font-size:10px;
+	position: absolute;
+	margin-left:1em;
+	margin-top:1.5em;
+}
+
+.additem {
+	padding: 12px 5px;
+	margin:0;
+	width: 250px;
+	outline: none;
+	border: none;
+	transition: .15s ease-in-out;
+	border-bottom: 1px solid #ddd;
+	margin-right:.5em;
+	font-size:18px;
+	font-weight: 700;
+	color:#222;
+}
+
+.additem:focus {
+	border-bottom:1px solid #78f;
+}
+
+h5 {
+	font-size:16px;
+	color:#000;
+}
+
+button {
+	border:none;
+	cursor: pointer;
+	color:#fff;
+	padding:15px 25px;
+	font-size: 14px;
+	font-weight: 700;
+	background: #78f;
+	transition: .15s ease-in-out;
+	border-radius: 3px;
+}
+
+button:hover {
+	background: #45c;
+}
+
+button:focus {
+	outline: none;
+	background: #23a;
+}
+
+.list {
+	margin: 1em 0;
+	padding:0;
+	padding:.5em 1em;
+	border-radius: 5px;
+	background:#fff;
+}
+
+.list li {
+	list-style: none;
+	animation: .5s ease-in-out 0s 1 fadeIn;
+	font-size: 20px;
+	padding: 0em .5em;
+	transition: .25s ease-in-out;
+}
+
+.cross li {
+	text-decoration: line-through;
+	padding:.5em .5em;
+}
+
+.checkbox {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.todo_item {
+	margin:0;
+	margin-left:2em;
+	padding:0;
+}
+
+.todo_list {
+	font-size:20px;
+	border-radius: 3px;
+	width: 500px;
+	padding:.5em 0;
+	margin:0;
+	display: inline-block;
+	background:transparent;
+	border:none;
+	transition: .25s ease-in-out;
+}
+
+.todo_list:focus {
+	border:0;
+	outline: none;
+	background:#eef;
+}
+
+.checkmark {
+	position: absolute;
+	margin-top:.65em;
+	margin-left:-.5em;
+	height: 18px;
+	width: 18px;
+	background-color: #ddd;
+	cursor: pointer;
+	transition: .25s ease-in-out;
+}
+
+.checkmark:before {
+	content: "";
+	position:absolute;
+	height:1em;
+	width:2px;
+	border-left: 3px dotted #eee;
+	margin-left:1.6em;
+	margin-top: -1px;
+}
+
+.cross .checkmark {
+	margin-top:.2em;
+}
+
+.clear {
+	cursor: pointer;
+	text-decoration: underline;
+	color:#aaa;
+	font-size:14px;
+}
+
+/* On mouse-over, add a grey background color */
+.list li:hover input ~ .checkmark {
+  background-color: #78f;
+}
+
+/* When the checkbox is checked, add a blue background */
+.list li input:checked ~ .checkmark {
+  background-color: #78f;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.list li input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.list li .checkmark:after {
+  left: 5.5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.empty {
+	color:#888;
+}
